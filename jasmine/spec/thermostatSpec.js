@@ -63,24 +63,45 @@ describe('Thermostat', function() {
 
   describe('turning power saving model on', function() {
     it('should change power saving to be true', function() {
-      thermostat.powerSavingOn()
+      thermostat.powerSavingOn();
       expect(thermostat.isPowerSaving).toEqual(true);
     });
     it('should change max temp to be lower max', function() {
-      thermostat.powerSavingOn()
+      thermostat.powerSavingOn();
       expect(thermostat.maxTemp()).toEqual(thermostat._MAXPSTEMP);
     });
   });
 
   describe('turning power saving model off', function() {
     it('should change power saving to be false', function() {
-      thermostat.powerSavingOff()
+      thermostat.powerSavingOff();
       expect(thermostat.isPowerSaving).toEqual(false);
     });
     it('should change max temp to be upper max', function() {
-      thermostat.powerSavingOff()
+      thermostat.powerSavingOff();
       expect(thermostat.maxTemp()).toEqual(thermostat._MAXTEMP);
     });
   });
 
+  describe('reset', function(){
+     it('should reset the temperature to the initial temp', function() {
+     thermostat.reset();
+     expect(thermostat.temp).toEqual(thermostat._INITIALTEMP);
+     });
+   });
+
+   describe('#energyUse', function(){
+     it('should display low usage when it is below LOW_USE value', function(){
+       thermostat.temp = 17;
+       expect(thermostat.energyUse()).toEqual('low')
+     });
+     it('should display medium usage when it is between LOW_USE value and HIGH_USE', function(){
+       thermostat.temp = 20;
+       expect(thermostat.energyUse()).toEqual('medium')
+     });
+     it('should display high usage when it is above HIGH_USE', function(){
+       thermostat.temp = 27;
+       expect(thermostat.energyUse()).toEqual('high')
+     });
+   });
 });
