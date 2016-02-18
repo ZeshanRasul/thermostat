@@ -2,25 +2,24 @@
 <html>
 <head>
   <title> Thermostat </title>
-  <a href="http://jquery.com/">jQuery</a>
-  <script src="js/thermostat.js"></script>
+  <link rel="stylesheet" type="text/css" href="index.css">
+
 </head>
 
 <body>
+  <section>
   <h1 id="temperature"></h1>
-  <button id="increase-temperature">UP</button>
-  <button id ="decrease-temperature">DOWN</button>
-  <button id ="reset-temperature">RESET</button>
-  <button id ="power-save-on">POWER SAVE</button>
+  <button id="increase-temperature">Up
+  </button>
+  <button id ="decrease-temperature">Down</button>
+  <button id ="reset-temperature">Reset</button>
+  <button id ="power-save-on">Power save</button>
   power saving mode is <span id="power-saving-status">on</span>
-  <button id="power-save-off">NO POWER SAVE</button>
-  <script>
-  window.onload = function() {
-
-    alert( "welcome" );
-
-};
-</script>
+  <button id="power-save-off">Don't power save</button>
+</section>
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="src/thermostat.js"></script>
+  <script src="src/interface.js"></script>
 
 </body>
 </html>
