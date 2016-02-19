@@ -1,13 +1,17 @@
 
+  .low {
+    background-color: green;
+  }
 
-.low {
-  color: green;
-}
+  .medium {
+    background-color: orange;
+  }
 
-.medium {
-  color: black;
-}
+  .high {
+    background-color: red;
+  }
 
-.high {
-  color: red;
+.control_buttons {
+
+  display: inline-block;
 }

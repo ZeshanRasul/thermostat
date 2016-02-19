@@ -6,7 +6,7 @@ $( document ).ready(function() {
 
   function updateTemperature() {
     $('#temperature').text(thermostat.getCurrentTemperature());
-    $('#temperature').attr('class', thermostat.energyUse());
+    $('#section_1').attr('class', thermostat.energyUse());
   }
   function updatePowerStatus() {
     if (thermostat.isPowerSaving === true){
@@ -17,9 +17,8 @@ $( document ).ready(function() {
   }
 
 
-  // $('#power-saving-status').text(thermostat.isPowerSaving());
-
   $('#temperature').text(thermostat.temp);
+  updateTemperature();
 
   $('#increase-temperature').click(function(){
     thermostat.increaseTemp();
