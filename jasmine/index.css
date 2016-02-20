@@ -1,3 +1,11 @@
+@import url(https://fonts.googleapis.com/css?family=Abril+Fatface);
+
+body {
+
+  font-family: 'Abril Fatface', cursive;
+  text-align: center;
+
+}
 
   .low {
     background-color: green;
@@ -11,7 +19,22 @@
     background-color: red;
   }
 
-.control_buttons {
-
-  display: inline-block;
+.temp_buttons {
+  width: 100%;
+  padding: 10px 8px 10px 8px;
+  display:inline-block;
 }
+
+.power_buttons {
+
+  padding: 10px 8px 10px 8px;
+
+}
+
+  .windy {
+    background-image: url:'img/tornado.jpg'
+  }
+
+  .not_windy {
+    background-image: url:'img/tumbleweed.jpg'
+  }

@@ -16,6 +16,14 @@ $( document ).ready(function() {
     }
   }
 
+  // function windLevel() {
+  //   if (cityWind > 3) {
+  //     $('#wind_pic').attr('class', "windy");
+  //   else {
+  //     $('#wind_pic').attr('class', "not_windy");
+  //   }
+  //   }
+  // }
 
   $('#temperature').text(thermostat.temp);
   updateTemperature();
@@ -63,12 +71,18 @@ $( document ).ready(function() {
       $('#city-temperature').text(cityTemp);
       $('#city-wind').text(cityWind);
       $('#city-weather').text(cityWeather);
+      windLevel();
 
-
-
-
-
+      function windLevel() {
+        if (cityWind > 3) {
+          $('#wind_pic').attr('class', "windy");
+        } else {
+          $('#wind_pic').attr('class', "not_windy");
+        }
+      }
     });
+
+
   });
 
 
