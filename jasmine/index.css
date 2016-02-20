@@ -3,6 +3,7 @@
 body {
 
   font-family: 'Abril Fatface', cursive;
+  width: 100%;
   text-align: center;
 
 }
@@ -23,6 +24,7 @@ body {
   width: 100%;
   padding: 10px 8px 10px 8px;
   display:inline-block;
+  border: 3px;
 }
 
 .power_buttons {
@@ -32,9 +34,13 @@ body {
 }
 
   .windy {
-    background-image: url:'img/tornado.jpg'
+    background-image: url('img/tornado.jpg');
   }
 
   .not_windy {
-    background-image: url:'img/tumbleweed.jpg'
+    background-image: url('img/tumbleweed.jpg');
   }
+
+#section_2 {
+  background-color: grey;
+}

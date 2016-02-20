@@ -4,6 +4,7 @@ $( document ).ready(function() {
   var city, cityName, cityTemp, cityWeather, cityWind;
 
 
+
   function updateTemperature() {
     $('#temperature').text(thermostat.getCurrentTemperature());
     $('#section_1').attr('class', thermostat.energyUse());
@@ -71,15 +72,16 @@ $( document ).ready(function() {
       $('#city-temperature').text(cityTemp);
       $('#city-wind').text(cityWind);
       $('#city-weather').text(cityWeather);
-      windLevel();
-
-      function windLevel() {
+      function windLevel(cityWind) {
         if (cityWind > 3) {
           $('#wind_pic').attr('class', "windy");
         } else {
           $('#wind_pic').attr('class', "not_windy");
         }
       }
+      windLevel(cityWind);
+
+
     });
 
 
