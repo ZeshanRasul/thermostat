@@ -1,46 +1,123 @@
 @import url(https://fonts.googleapis.com/css?family=Abril+Fatface);
 
 body {
-
   font-family: 'Abril Fatface', cursive;
   width: 100%;
   text-align: center;
-
+  background-color: #484848;
 }
 
-  .low {
-    background-color: green;
-  }
+#section_1 {
+  text-align: center;
+}
 
-  .medium {
-    background-color: orange;
-  }
+#temperature {
+  font-size: 120px;
+  border: 10px solid black;
+  border-radius: 30px;
+  padding: 10px 10px 10px 10px;
+  width: 270px;
+  margin: auto;
+  margin-bottom: 10px;
+}
 
-  .high {
-    background-color: red;
-  }
+.low {
+  color: green;
+}
+
+.medium {
+  color: orange;
+}
+
+.high {
+  color: red;
+}
 
 .temp_buttons {
   width: 100%;
-  padding: 10px 8px 10px 8px;
   display:inline-block;
-  border: 3px;
 }
 
 .power_buttons {
-
   padding: 10px 8px 10px 8px;
-
 }
 
-  .windy {
-    background-image: url('img/tornado.jpg');
-  }
+nav button {
+  display:inline-block;
+  background-color: #CCFFFF;
+  border:none;
+  border-radius: 3px;
+  font-family: 'Abril Fatface', cursive;
+}
 
-  .not_windy {
-    background-image: url('img/tumbleweed.jpg');
-  }
+nav button:hover {
+  background-color: #fff;
+}
+
+nav button:focus {
+  outline: 0;
+}
+
+#psm {
+  color: black;
+}
 
 #section_2 {
-  background-color: grey;
+  border: 3px solid black;
+  padding: 3px;
+}
+
+#submit_city {
+  display:inline-block;
+  background-color: #CCFFFF;
+  border:none;
+  border-radius: 3px;
+  font-family: 'Abril Fatface', cursive;
+}
+
+#submit_city:hover {
+  background-color: #fff;
+}
+
+#submit_city:focus {
+  outline: 0;
+}
+
+.pictures {
+  float: left;
+  width: 100%;
+  display: inline-block;
+}
+#wind_pic {
+  width:500px;
+  height:375px;
+  float: right;
+  margin-right: 30px;
+}
+
+#weather_pic {
+  width:500px;
+  height:375px;
+  float: left;
+  margin-left: 30px;
+}
+
+.windy {
+  background-image: url('img/tornado.jpg');
+}
+
+.not_windy {
+  background-image: url('img/tumbleweed.jpg');
+}
+
+.hot {
+  background-image: url('img/sunny.jpg');
+}
+
+.cold {
+  background-image: url('img/cold.jpg');
+}
+
+#googleMap {
+  margin: 0 auto 0 auto;
 }
